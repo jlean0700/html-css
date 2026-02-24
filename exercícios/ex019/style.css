@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* Em HTML que é ID = em SSL é # 
+Em HTML que é Class = em SSL é 
+*/
+
+body {
+    background-color: rgb(198, 193, 226);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    background-color: aliceblue;
+    color: rgb(0, 0, 0);
+
+}
+
+/* na área de html usamos id frente do h1
+aqui na área de style usamos o # pra indetificar o id */
+
+h1#principal {
+    background-color:rgb(238, 0, 0);
+    text-align: center;
+    color: rgb(247, 247, 248);
+}
+
+
+h2 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(29, 67, 236);
+}
+
+p {
+    color: rgb(0, 0, 0);
+    
+}
+
+/* aqui abaixo vamos usar class = . 
+colocamos o class na área de html na frente do h2,
+aqui  em style colocamos o . + o nome que demos para o class lá na área do html que neste caso foi como exempplo usei o nome "basico"!
+*/
+
+.basico { color: rgb(22, 197, 66);
+
+}
+
+
+
+

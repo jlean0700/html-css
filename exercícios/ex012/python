@@ -1,0 +1,94 @@
+from fpdf import FPDF
+
+class PDF(FPDF):
+    def header(self):
+        self.set_font('Arial', 'B', 18)
+        self.set_text_color(0, 51, 102)  # Azul escuro
+        self.cell(0, 10, 'Comparação de Notebooks', 0, 1, 'C')
+        self.ln(5)
+
+    def chapter_title(self, title):
+        self.set_font('Arial', 'B', 14)
+        self.set_text_color(255, 255, 255)
+        self.set_fill_color(0, 102, 204)  # Azul
+        self.cell(0, 8, title, 0, 1, 'L', 1)
+        self.ln(2)
+
+    def chapter_body(self, body):
+        self.set_font('Arial', '', 12)
+        self.set_text_color(0, 0, 0)
+        self.multi_cell(0, 6, body)
+        self.ln()
+
+pdf = PDF()
+pdf.add_page()
+pdf.set_auto_page_break(auto=True, margin=15)
+
+# Notebook 1
+pdf.chapter_title("Notebook 1: Lenovo Ideapad Slim 3 15IRH10")
+pdf.chapter_body(
+    "- Processador: Intel Core i5‑13420H\n"
+    "- RAM: 8 GB\n"
+    "- Armazenamento: 512 GB SSD NVMe\n"
+    "- Tela: 15,3\" Full HD Touch\n"
+    "- Sistema: Windows 11\n"
+    "- Preço aproximado: R$ 2.900\n"
+    "- Público-alvo: Estudantes e produtividade diária"
+)
+
+# Notebook 2
+pdf.chapter_title("Notebook 2: Acer Aspire 15")
+pdf.chapter_body(
+    "- Processador: Intel Core i5‑13420H\n"
+    "- RAM: 8 GB (variante de upgrade possível)\n"
+    "- Armazenamento: 512 GB SSD NVMe\n"
+    "- Tela: 15,6\" Full HD\n"
+    "- Sistema: Windows 11\n"
+    "- Preço aproximado: R$ 4.284\n"
+    "- Público-alvo: Estudantes, multitarefa e trabalho mais intenso"
+)
+
+# Comparação rápida
+pdf.chapter_title("Comparação Rápida")
+pdf.chapter_body(
+    "Característica | Lenovo Ideapad Slim 3 | Acer Aspire 15\n"
+    "----------------|----------------------|----------------\n"
+    "Processador     | i5‑13420H             | i5‑13420H\n"
+    "RAM             | 8 GB                  | 8 GB (expansível)\n"
+    "Armazenamento   | 512 GB SSD NVMe       | 512 GB SSD NVMe\n"
+    "Tela            | 15,3\" Full HD Touch  | 15,6\" Full HD\n"
+    "Preço           | ~R$ 2.900             | ~R$ 4.284\n"
+    "Público-alvo    | Estudantes / produtividade | Estudantes / multitarefa"
+)
+
+# Pontos fortes
+pdf.chapter_title("Pontos Fortes")
+pdf.chapter_body(
+    "Lenovo Ideapad Slim 3:\n"
+    "- Excelente custo-benefício\n"
+    "- Tela touchscreen útil para apps e navegação\n"
+    "- SSD rápido e processador potente\n\n"
+    "Acer Aspire 15:\n"
+    "- Tela maior e mais confortável para multitarefa\n"
+    "- Construção mais robusta\n"
+    "- Pode ter variantes com mais RAM e melhor conectividade"
+)
+
+# Pontos a considerar
+pdf.chapter_title("Pontos a Considerar")
+pdf.chapter_body(
+    "- Ambos têm apenas 8 GB de RAM, podendo ser limitante para softwares pesados\n"
+    "- Sem GPU dedicada, limitada performance em 3D ou edição avançada\n"
+    "- Lenovo oferece touchscreen, Acer oferece tela maior"
+)
+
+# Conclusão
+pdf.chapter_title("Conclusão")
+pdf.chapter_body(
+    "- Lenovo Ideapad Slim 3: melhor custo-benefício para faculdade e uso geral\n"
+    "- Acer Aspire 15: vale a pena se quiser tela maior e equipamento mais robusto"
+)
+
+# Salvar o PDF
+pdf.output("comparacao_notebooks_visual.pdf")
+print("PDF gerado com sucesso!")

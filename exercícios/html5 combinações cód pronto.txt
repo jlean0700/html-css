@@ -1,0 +1,53 @@
+lista em um grupo 5 itens incluindo: "Arroz", "Feijão", "Farofa", "Salada", "Omelete", "Batata", 
+"Frango", "Purê", "Bife", "Banana","Brócolis" "ovos" "Suco" "carne" "macarrão"
+
+cód html pronto abaixo:
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>3003 Combinações de 5 Itens</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.5; }
+    h1 { margin-bottom: 15px; }
+    ol { max-height: 90vh; overflow-y: auto; padding-left: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>3003 Combinações de 5 Itens</h1>
+
+<ol id="lista"></ol>
+
+<script>
+  const itens = [
+    "Arroz", "Feijão", "Farofa", "Salada", "Omelete",
+    "Batata", "Frango", "Purê", "Bife", "Banana",
+    "Brócolis", "Ovos", "Suco", "Carne", "Macarrão"
+  ];
+
+  // Função recursiva para gerar combinações
+  function combinar(arr, k, inicio = 0, atual = [], resultado = []) {
+    if (atual.length === k) {
+      resultado.push(atual.join(", "));
+      return;
+    }
+    for (let i = inicio; i < arr.length; i++) {
+      combinar(arr, k, i + 1, [...atual, arr[i]], resultado);
+    }
+    return resultado;
+  }
+
+  const combinacoes = combinar(itens, 5);
+
+  const ol = document.getElementById("lista");
+  combinacoes.forEach(c => {
+    const li = document.createElement("li");
+    li.textContent = c;
+    ol.appendChild(li);
+  });
+</script>
+
+</body>
+</html>

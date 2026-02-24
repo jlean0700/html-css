@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Praticando links externos e internos</title>
+    <style>
+       body {background-color: rgba(105, 99, 99, 0.473);}
+    </style>
+
+</head>
+<body>
+    <h1>Usando links externos </h1>
+
+    <h2>link externo</h2>
+
+    <p>links que te levam para sites de terceiros</p>
+
+    <p>Você pode acessar o repositório público do <a href="https://github.com/gustavoguanabara/html-css/tree/master/aulas-pdf" target="_blank" rel="noopener">GitHub do Curso e Vídeo.</a> 
+
+
+    <p>Você também pode acessar essa aula em <a href="https://www.youtube.com/watch?v=LeLnlT-ZKw8&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=29" target="_blank" rel="noopener">Vídeo no YouTube!</a>
+
+<hr>
+    <h2>
+     Exemplos de Links Interno junto c/ target e Rel
+    </h2>
+
+    <p>
+        <a href="../ex002/index.html" target="_blank">Exercício 2- Emojis</a>
+    </p>
+
+    <p>
+        <a href="../ex003/index.html" target="_blank">Exercício 3- imagem</a>
+    </p>
+
+    <p>
+        <a href="../ex004/index.htm" target="_blank" rel="nofollow">Exercício 4 - favicon </a>
+    </p>
+
+    <p>
+        <a href="../ex006/index.html" target="_blank" rel="nofollow">Exercício 6 - Temática Modo de Escrita</a>
+    </p>
+
+    <p>
+        <a href="../ex007/Semântica.html" target="_blank" rel="nofollow">Exercício 7 - Semântica e Cor de fundo do Site</a>
+    </p>
+
+    <p>
+        <a href="../ex008/index.html" target="_blank" rel="nofollow">Exercício 8 - FORMATÇÕES DE TEXTO</a>
+    </p>
+    
+    <p>
+        <a href="../ex009/index.html" target="_blank" rel="nofollow">Exercício 9 - ORDENADAS E NÃO ORDENADAS</a>
+    </p>
+
+    <h2>Finalalizando Exercício 10 hoje 30/01</h2>
+
+    <h1>Links Módulo 01 Capítulo 10 Aula 03 </h1>
+    <h2>Links p/ downloads</h2>
+
+    <ul>
+        <li> <a href="Livros/10 - Ligações em toda parte.pdf" download="Ligações em toda parte.pdf" target="_blank">baixar o livro em .pdf</a></li>
+        <li> <a href="Livros/10 - Ligações em toda parte.zip" download="10 - Ligações em toda parte.zip" target="_blank" >  baixar o livro em .ZIP</a></li>
+    </ul>
+
+
+
+    <p>
+
+        <pre>
+✅ Exemplos práticos
+
+Link externo seguro
+<a href="https://siteexterno.com" target="_blank" rel="noopener noreferrer">
+  Site externo
+</a>
+
+
+Link patrocinado
+<a href="https://afiliado.com" rel="sponsored nofollow">
+  Comprar agora
+</a>
+
+Comentários de usuários
+<a href="https://usuario.com" rel="ugc nofollow">
+  Site do usuário
+</a>
+
+
+rel que VALEM a pena hoje
+rel="nofollow"
+rel="sponsored"
+rel="ugc"
+
+Quando usar:
+sponsored → links pagos / afiliados
+ugc → comentários, fóruns, reviews
+nofollow → quando não quer endossar o link
+
+========================================================================================================================================
+
+
+<p>🔗 Mini-Guia de Links: target + rel
+1️⃣ Links internos do seu site
+
+Exemplo: páginas do seu próprio domínio
+
+<a href="/sobre-nos" target="_self">Sobre nós</a>
+
+
+Target: _self (ou pode omitir, é padrão)
+
+Rel: não precisa
+
+Quando usar: menus, rodapé, breadcrumbs, links de conteúdo
+
+Objetivo: manter usuário na mesma aba e reforçar semântica interna
+
+2️⃣ Links externos normais (não patrocinados, referência)
+
+Exemplo: canal do YouTube, site de notícias, blog de referência
+
+<a href="https://youtube.com/canal" target="_blank" rel="noopener noreferrer nofollow">
+  Canal no YouTube
+</a>
+
+
+Target: _blank → abre nova aba
+
+Rel:
+
+noopener → segurança contra tabnabbing
+
+noreferrer → não envia referer
+
+nofollow → não passa autoridade (não endossa o site)
+
+Quando usar: links externos sem relação ou parceria
+
+Objetivo: segurança, privacidade e SEO correto
+
+3️⃣ Links patrocinados ou afiliados
+<a href="https://afiliado.com/produto" target="_blank" rel="sponsored nofollow noopener noreferrer">
+  Comprar produto
+</a>
+
+
+Target: _blank → geralmente melhor UX
+
+Rel:
+
+sponsored → indica link pago/afiliado
+
+nofollow → não passa autoridade
+
+noopener noreferrer → segurança e privacidade
+
+4️⃣ Links de conteúdo gerado pelo usuário
+
+Exemplo: comentários, fóruns, avaliações
+
+<a href="https://usuario.com" target="_blank" rel="ugc nofollow noopener noreferrer">
+  Site do usuário
+</a>
+
+
+ugc → conteúdo gerado pelo usuário
+
+Mantém nofollow, segurança e privacidade
+
+5️⃣ Resumo rápido por tipo de link
+Tipo de link	Target	Rel
+Interno	_self (ou omitido)	—
+Externo (referência)	_blank	noopener noreferrer nofollow
+Externo patrocinado/afiliado	_blank	sponsored nofollow noopener noreferrer
+Conteúdo de usuários	_blank	ugc nofollow noopener noreferrer</p>
+        </pre>
+    </p>
+
+
+
+</body>
+</html>
