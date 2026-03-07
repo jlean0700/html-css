@@ -14,12 +14,20 @@
 
         table {
             width: 400px;
-            
+            border-collapse: collapse;
         }
 
         td {
             border: 1px solid black;
             padding: 8px;
+        }
+
+        .linha1 {
+            background-color: blue;
+        }
+
+        .a1 {
+            background-color: gray;
         }
 
     </style>
@@ -39,25 +47,25 @@
     -->
 
     <table>
-        <tr> <!-- primeira linha-->
-            <td>A1</td>
+        <tr class="linha1"> <!-- primeira linha-->
+            <td class="a1">A1</td>
             <td>B1</td>
             <td>C1</td>
         </tr>
 
-        <tr>
+        <tr>  <!-- segunda linha-->
             <td>A2</td>
             <td>B2</td>
             <td>C2</td>
         </tr>
 
-        <tr>
+        <tr> <!-- terceira linha-->
             <td>A3</td>
             <td>B3</td>
             <td>C3</td>
         </tr>
 
-        <tr>
+        <tr> <!--quarta linha-->
             <td> A4</td>
             <td>B4</td>
             <td>C4</td>
