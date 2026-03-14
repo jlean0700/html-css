@@ -11,9 +11,9 @@
 
         table {
             text-align: center;
-            width: 600px;
             border-collapse: collapse;
             padding: 10px;
+            width: 550px;
         }
 
         thead th {
@@ -29,6 +29,11 @@
             text-align: justify;
         }
 
+        .notas {
+            background-color: gray;
+            color: white;
+        }
+
         th {
             border: 1px solid black;
             padding: 10px;
@@ -40,8 +45,7 @@
         td {
             border: 1px solid black;
             padding: 10px;
-        }
-
+         }
 
     </style>
 </head>
@@ -50,18 +54,18 @@
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Área</th>
-                <th rowspan="2">Disciplinas</th>
-                <th colspan="2">Notas</th>
+                <th rowspan="2" scope="colgroup">Área</th>
+                <th rowspan="2" scope="colgroup">Disciplinas</th>
+                <th colspan="2" scope="colgroup">Notas</th>
                 
-                <th rowspan="2">Média</th>
+                <th rowspan="2" scope="colgroup">Média</th>
             </tr>     
 
         <tr>
             
             
-            <th>Nota 1</th>
-            <th>Nota 2</th>
+            <th scope="colgroup">Nota 1</th>
+            <th scope="colgroup">Nota 2</th>
            
         </tr>
     </thead>
@@ -100,11 +104,11 @@
         </tr>
 
         <tr>
-            <th colspan="4" class="media">Média De Exatas</th>
+            <th colspan="4" scope="row" class="media">Média De Exatas</th>
             
 
 
-            <td>0.0</td>
+            <td class="notas">0.0</td>
         </tr>
 
         <tr>
@@ -124,11 +128,11 @@
         </tr>
 
         <tr>
-            <th colspan="4" class="media">Média de Humanas</th>
+            <th colspan="4" scope="row" class="media">Média de Humanas</th>
           
 
             
-            <td>0.0</td>
+            <td class="notas">0.0</td>
         </tr>    
 
     </tbody>
