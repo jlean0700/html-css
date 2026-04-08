@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form010</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+
+   </form>
+
+       <form action="cadastro.php" method="get">
+        <fieldset>
+            <legend>Soma</legend>
+            <p>
+                <label for="id-n1">Número 1:</label>
+                <input type="number" name="n1" id="id-n1" min="0" max="50" required oninput="document.getElementById('id-soma').innerHTML = Number(this.value) + Number(document.getElementById('id-n2').value)">
+            </p>
+            <p>
+                <label for="id-n2">Número 2:</label>
+                <input type="number" name="n2" id="id-n2" min="0" max="50" required oninput="document.getElementById('id-soma').innerHTML = Number(document.getElementById('id-n1').value) + Number(this.value)">
+            </p>
+            <p>
+                <label for="id-soma">Soma:</label>
+                <output for="id-n1 id-n2" id="id-soma">0</output>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
+        <fieldset style="width: 230px;">
+            <legend>Exibição de valor do range</legend>
+            <p>
+                <label for="id-numero">Número:</label>
+                <input type="range" name="numero" id="id-numero" min="0" max="10" value="5" step="0.5" oninput="document.getElementById('id-valor').textContent = this.value">
+                <output id="id-valor">5</output>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Cálculo de idade</legend>
+            <p>
+                <label for="id-ano">Em que ano você nasceu?</label>
+                <input type="number" name="ano" id="id-ano" min="1900" max="2025" oninput="calcularIdade()">
+            </p>
+            <p>Já fez aniversário esse ano?</p>
+            <p>
+                <input type="radio" name="aniversario" id="id-aniversario-sim" value="S" onclick="calcularIdade()">
+                <label for="id-aniversario-sim">Sim</label>
+            </p>
+            <p>
+                <input type="radio" name="aniversario" id="id-aniversario-nao" value="N" checked onclick="calcularIdade()">
+                <label for="id-aniversario-nao">Não</label>
+            </p>
+            <p>
+                <label for="id-idade">Sua idade é:</label>
+                <output id="id-idade">0</output>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <script>
+        function calcularIdade() {
+            let anoAtual = new Date().getFullYear();
+            let aniversario = document.querySelector("input[name='aniversario']:checked")?.value;
+            document.getElementById("id-idade").textContent = Number(anoAtual) - Number(document.getElementById("id-ano").value) - (aniversario === "N" ? 1 : 0);
+        }
+    </script>
+    
+</body>
+</html>
