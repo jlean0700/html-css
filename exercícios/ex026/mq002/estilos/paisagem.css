@@ -2,8 +2,7 @@
 
 /* Estilos para a orientação paisagem (landscape)*/   
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-image: url(../Imagens/cev-landscape.jpg);
+    background-position: left bottom;
 }
