@@ -7,11 +7,13 @@
 /*  
     typical device breakpoints 
 
-    pequenas (320px - 480px) - smartphones
-    médias (481px - 768px) - tablets
-    grandes (769px - 1024px) - desktops
-    extra grandes (1025px - 1200px) - desktops grandes
-    tvs e monitores (1201px ou mais) - TVs e monitores grandes
+    Pequenas Telas e Celular: até 480px
+
+    Tablet e Foldables: 481px - 1024px
+
+    Desktop e Laptops:  1025px - 1600px
+
+    TV e Monitores Ultra-Wide:  1601px - 3840px ou mais
 */
 
 /* IMPRESSÃO */
