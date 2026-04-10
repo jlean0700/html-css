@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Great+Vibes&display=swap');
+
 /* Versão para todas as demais mídias */
 
 /*  
@@ -12,10 +14,39 @@
     tvs e monitores (1201px ou mais) - TVs e monitores grandes
 */
 
-
+/* IMPRESSÃO */
 @media print {
+
+    *
+        {
+            font-family: 'Great Vibes';
+        }
+
     body {
-        
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+        img#phone {display: none;}
+        img#tablet {display: none;}
+        img#print {display: block;}
+        img#pc {display: none;}
+        img#tv {display: none;}
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: "Esse é um teste de impressão gerado apenas no momento imprimir a página. Ele não aparecerá na tela.";
+        display: block;
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
     }
 }
 
